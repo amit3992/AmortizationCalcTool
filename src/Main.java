@@ -13,9 +13,9 @@ public class Main {
 				// Get APR from credit score
 				// Calculate total payments
 		System.out.println("Welcome!\n");
-		UserDetails user = new UserDetails();
 		
-		UserDetails.getUserDetails();
+		UserLoanDetails u = new UserLoanDetails();
+		u.getUserLoanDetails();
 		
 	}
 

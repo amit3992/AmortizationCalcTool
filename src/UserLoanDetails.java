@@ -1,11 +1,13 @@
 import java.util.Scanner;
 
+import javax.swing.plaf.nimbus.AbstractRegionPainter;
+
 
 public class UserLoanDetails {
 
 	private static double loanAmount; 
 	private static int duration;
-	private static int creditScore;
+	public static int creditScore;
 	
 	static Scanner sc = new Scanner(System.in);
 	
@@ -25,10 +27,15 @@ public class UserLoanDetails {
 		
 	}
 	
-	public static void getUserDetails() {
+	public static double getAPR(int cs) {
+		return APRMap.getAPRFromCreditScore(cs);
+	}
+	
+	public static void getUserLoanDetails() {
 		getLoanAmount();
 		getLoanDuration();
 		getCreditScore();
+		getAPR(creditScore);
 	}
 	
 }
